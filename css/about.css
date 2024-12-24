@@ -1,0 +1,63 @@
+
+body, html { height: 100%;}
+
+#contentabout {
+    display: grid;
+    justify-items: center;
+    grid-template-areas:
+	  "navigation navigation navigation navigation"
+	  "parallax-two parallax-two parallax-two parallax-two"
+	  "footer footer footer footer";
+}
+
+.parallax-two{grid-area: parallax-two;}
+
+#navigation{width: 100%}
+
+.parallax-two {
+    margin: 0 auto;
+    width: 85vw;
+    background-image:      url('main56.jpg');
+    background-attachment: fixed;  /* Create the parallax scrolling effect */
+    background-position:   center top;
+    background-repeat:     no-repeat;
+    background-size:       cover;
+  }
+
+
+.abouttext {
+    height:           auto;
+    background-color: rgba(255, 255, 255, .75);
+    color:            rgb(55, 55, 55);
+    margin:           10vw 9vw;
+    border-radius:    20px;
+    padding:          0 3vw 3vw 3vw;
+}
+
+.abouttext h1 {
+    font-size: 2.6rem;
+    margin:    0;
+    padding:   3vw 3vw 2vw 0;
+    line-height: 3rem;
+}
+
+
+.abouttext p {
+	font-size:   1.1rem;
+	line-height: 1.5rem;
+}
+
+
+@media screen and (min-width: 620px){
+
+.abouttext h1 {
+    font-size: 3rem;	
+    line-height: 2rem;
+}
+
+.abouttext p {
+	font-size:   1.5rem;
+	line-height: 2rem;
+}
+}
+

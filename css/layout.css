@@ -1,0 +1,195 @@
+
+
+/* -- GRID LAYOUT & FONT SIZE-- */ 
+
+
+/* MOBILE GRID LAYOUT */
+
+body{
+	font-size: 16px;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#content{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	min-width: 300px;
+	margin: 0 auto;
+	grid-template-areas:
+	  "header header header header"
+		"navigation navigation navigation navigation"
+		"main main main main"
+	  "section section section section"
+	  "moreblog moreblog moreblog moreblog"
+	  "about about about about"
+	  "contact contact contact contact"
+	  "footer footer footer footer";
+}
+
+header {
+	display: grid;
+	margin: 0;
+	justify-items: center;
+}
+
+main {
+	display: none;
+}
+
+.flip-card {
+	margin: 30px;
+}
+
+.latest-container {
+	display: grid;
+	justify-items: center;
+	justify-self: center;
+}
+
+.latest{
+	display: grid;
+	justify-items: center;
+	justify-self: center;
+}
+
+.blogicon {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
+	width: 80vw;
+	height: 80vh;
+	margin: 0 auto;
+}
+	
+	
+.moreblogicon {
+	display: grid;
+	justify-items: center;
+	justify-self: center;
+}
+ 
+  /* SMALL TABLETS GRID LAYOUT */
+
+  @media screen and (min-width: 620px){
+	  body{
+	    font-size: 18px;
+	  }
+	 
+	  #content{
+		grid-template-areas:
+		  "header header header header"
+			"navigation navigation navigation navigation"
+		  "main main main main"
+		  "section section section section"
+	  	"moreblog moreblog moreblog moreblog"
+		  "about about about about"
+	    "contact contact contact contact"
+		  "footer footer footer footer";
+		}
+
+		.latest-container{
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 5px;
+			margin: 0 15vw;
+		}
+
+		main {
+			display: grid;
+			justify-items: center;
+			justify-self: center;
+			align-items: center;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 8px;
+		}
+
+		.flip-card {
+		  margin: 30px 0;
+		}
+
+		.blogicon {
+			grid-template-columns: repeat(3, 1fr);
+			max-width: 600px;
+			width: 80vw;
+			height: 50vh;
+			margin: 0 auto;
+		}
+
+  }
+
+  /* LARGE TABLETS @ LAPTOPS GRID LAYOUT */
+	
+  @media screen and (min-width: 960px){
+	  
+	  body{
+	    font-size: 19px;
+  	}
+	  
+	  #content{
+		grid-template-areas:
+		  "header header header header"
+			"navigation navigation navigation navigation"
+		  "main main main main"
+		  "section section section section"
+	    "moreblog moreblog moreblog moreblog"
+		  "about about about about"
+	    "contact contact contact contact"
+		  "footer footer footer footer";
+	  }	
+	  	  
+
+			  
+  }
+	
+	
+	
+	
+  /* DESKTOP GRID LAYOUT */
+ 
+  @media screen and (min-width: 1200px){
+	  
+	  body{
+	    font-size: 24px;
+    }
+	  
+	  #content{
+		max-width: 1920px;
+		grid-template-areas:
+		  "header header header header"
+			"navigation navigation navigation navigation"
+		  "main main main main"
+		  "section section section section"
+	  	"moreblog moreblog moreblog moreblog"
+		  "about about about about"
+	    "contact contact contact contact"
+		  "footer footer footer footer";
+		}
+		
+		.blogtitles {
+			width: 1200px;
+			margin: 0 auto;
+		}
+
+		.latest-container {
+			margin: 0 auto;
+		}
+
+		.blogicon:not(:first-child) {
+			margin: 0 auto;
+		}
+
+  }
+
+
+header{ grid-area: header;}
+main{   grid-area: main;}
+.navigation{	grid-area: navigation;}
+section{grid-area: section;}
+#moreblog{grid-area: moreblog;}
+.about{grid-area: about;}
+.contact{grid-area: contact;}
+footer{ grid-area: footer;}

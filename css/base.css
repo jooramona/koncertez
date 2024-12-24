@@ -1,0 +1,44 @@
+	
+*    { box-sizing:       border-box;}
+
+html { scroll-behavior:  smooth;}
+
+body {
+  color:                 white;
+  font-family:           'Anton', sans-serif;
+}
+
+
+
+h1, h2, h3, h4, h5, h6,
+p,
+ul {
+  margin:           0;
+}
+
+
+h1, h2, h3, h4, h5, h6,
+p {
+  margin-bottom:    1em;
+}
+
+
+a {
+  text-decoration:  none;
+  cursor:           pointer;
+  color:            var(--secondary);
+}
+
+
+:root {
+	--primary:     #fff;
+	--secondary:   rgb(39, 39, 39);
+	--tertiary:    #ffee65;
+}
+
+
+#content {
+  background-color: #FFF;
+}
+
+
